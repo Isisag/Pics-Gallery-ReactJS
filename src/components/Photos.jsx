@@ -4,15 +4,26 @@ import Photo from "./Photo";
 import Grid from "@material-ui/core/Grid";
 
 
+const Photos = ({ photo }) => (
 
-const Photos = ({ photo, color, doneFetch }) => {
+    <Grid container justifyContent="center">
+       
+            {
+            photo.map((photo) => {
+                return(
+                    <Photo 
+                    key={photo.id}
+                    photographer={photo.photographer}
+                    photographer_url={photo.photographer_url}
+                    src={photo.src.medium}
+                    url={photo.url}
+                    alt={photo.alt}
+                    />
+                )
+           })}
 
- 
-    return (
-        <Grid>
-            <Photo />
-        </Grid>
-    )
-}
+    </ Grid>
+   
+)
 
 export default Photos;

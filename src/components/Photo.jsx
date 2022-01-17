@@ -1,22 +1,23 @@
 import React, {useContext, useEffect} from 'react'
 import Paper from "@material-ui/core/Paper"
+import Card from "@material-ui/core/Card"
 
-const Photo = ({ photo, color, doneFetch }) => {
+const Photo = ({ photographer, photographer_url, src, url, alt }) => (
 
-    
+    <Card>
 
-    useEffect( ()=> {
-        console.log('testing photo')
-    },[]);
+        <img src={src} alt={alt} />
+        <br />
+        <span> {alt} </span>
+        <br />
+        <h3> <b> Fotografo: </b> {photographer} </h3> 
+        <br />
+        <span> <b> Link: </b> {photographer_url} </span>
+        <br />
+        <span> <b> url foto: </b> {url} </span>
 
+    </Card>
 
-    return (
-        <Paper>
-            <p> IM A PHOTO COMPONENT </p>
-            <p> IM A PHOTO COMPONENT </p>
-            <p> IM A PHOTO COMPONENT </p>
-        </Paper>
-    )
-};
+);
 
 export default Photo

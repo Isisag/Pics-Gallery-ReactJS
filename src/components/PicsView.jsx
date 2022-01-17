@@ -5,24 +5,11 @@ import Grid from "@material-ui/core/Grid"
 
 const PicsView = () => {
 
-    const { photo, color, doneFetch } = useContext(PhotosContext);
-
-    // useEffect( () => {
-    //     console.log("saludo")
-    // }, [])
-
-    // const [photo, setPhoto] = useState();
-
-    // const getPhotoData = () => {
-
-    // } 
-
+    const { photo } = useContext(PhotosContext);
 
     return (
         <Fragment>
-            <Photos>
-
-            </Photos>
+            <Photos photo={photo} id={photo.photographer_id}/>
         </Fragment>
     )
 }

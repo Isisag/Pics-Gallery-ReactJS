@@ -2,15 +2,14 @@ import React from 'react';
 import ColorButton from './ColorButton';
 import ButtonGroup from "@material-ui/core/ButtonGroup"
 
-const ColorButtons = () => {
+const ColorButtons = ({color}) => {
+
+    
     return (
         <ButtonGroup>
-             <ColorButton />
-             <ColorButton />
-             <ColorButton />
-             <ColorButton />
+             <ColorButton   />
         </ButtonGroup>
     )
-}
+};
 
 export default ColorButtons
