@@ -15,9 +15,10 @@ function App() {
      
       <Switch>
         <Route >
-          <PhotosContextProvider>
-             <ColorButtons />  
-             <PicsView />
+          <PhotosContextProvider> 
+             <PicsView>
+             <ColorButtons /> 
+             </PicsView>
           </PhotosContextProvider>
         </Route>
         <Route>

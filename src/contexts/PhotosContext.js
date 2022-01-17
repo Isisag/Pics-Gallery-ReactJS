@@ -30,7 +30,7 @@ const PhotosContextProvider = ({children}) =>{
                 .catch((err) => console.log(err));
             };
 
-            const changeColor = () => {
+            const getImageColor = () => {
                 fetch(getColor(),{
                     method: 'GET',
                     headers: {
