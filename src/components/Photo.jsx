@@ -1,22 +1,25 @@
-import React, {useContext, useEffect} from 'react'
+import React from 'react'
+import { Link } from "react-router-dom";
+import "../App.css"
 import Paper from "@material-ui/core/Paper"
-import Card from "@material-ui/core/Card"
+import Details from "./Details"
+import DetailsButton from './DetailsButton';
 
-const Photo = ({ photographer, photographer_url, src, url, alt }) => (
+const Photo = ({ photographer, photographer_url, src, url, alt, photoId }) => (
 
-    <Card>
-
-        <img src={src} alt={alt} />
-        <br />
-        <span> {alt} </span>
-        <br />
-        <h3> <b> Fotografo: </b> {photographer} </h3> 
-        <br />
-        <span> <b> Link: </b> {photographer_url} </span>
-        <br />
-        <span> <b> url foto: </b> {url} </span>
-
-    </Card>
+    <Paper className="paper-adjust">
+        <div className="photo-card">
+            <h3> {alt} </h3>
+            <img src={src} alt={alt} className='img-card'/>
+            <br />
+            <h2> <b> Pic by:  </b> {photographer.toLowerCase()} </h2> 
+            <a href={photographer_url}> See more to {photographer} work </a> 
+            <br /><br />
+            <a href={url} > HD Pic View </a>
+            <br /><br />
+            <DetailsButton type="details" to={`photo/${photoId}`} />
+        </div>
+    </Paper>
 
 );
 

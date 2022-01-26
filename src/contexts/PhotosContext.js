@@ -1,13 +1,15 @@
 import React , { useState, createContext, useEffect } from 'react';
-import { getPhoto, api_key, getColor } from "../endpoint"
+import { getPhoto, api_key, getColorUrl } from "../endpoint"
 
 export const PhotosContext = createContext();
 
 const PhotosContextProvider = ({children}) =>{
 
-    const [color, setColor] = useState([])
+    const [color, setColor] = useState()
+    const [photoDetails, photoDetailsSet] = useState([])
     const [photo, setPhoto] = useState([])
-    const [doneFetch, setDoneFetch] = ("")
+    // const [doneFetch, setDoneFetch] = useState("")
+
 
     useEffect( ()=> {
         getImage();
@@ -30,24 +32,9 @@ const PhotosContextProvider = ({children}) =>{
                 .catch((err) => console.log(err));
             };
 
-            const getImageColor = () => {
-                fetch(getColor(),{
-                    method: 'GET',
-                    headers: {
-                        Autorization: api_key
-                    }
-                })
-                .then( (res) => res.json())
-                .then( (data) => {
-                    setColor(data.photos)
-                    console.log(data)
-                })
-                .catch( (err) => console.log(err))
-            }
-
 
     return(
-       <PhotosContext.Provider value={{color, photo, doneFetch}}>
+       <PhotosContext.Provider value={{color, photo }}>
            {children}
        </PhotosContext.Provider>
     )
