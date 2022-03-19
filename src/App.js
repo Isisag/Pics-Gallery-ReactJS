@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from './components/Header';
+import Footer from './components/Footer';
 import PicsView from './components/PicsView';
 import Details from "./components/Details"
 import PhotosContextProvider from './contexts/PhotosContext';
@@ -9,19 +10,20 @@ import PhotosContextProvider from './contexts/PhotosContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={PicsView} >
-          <PhotosContextProvider> 
-             <PicsView />
-          </PhotosContextProvider>
-        </Route>
-        <Route path="/photo/:id" component={Details}>
-          <Details />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <PhotosContextProvider> 
+          <Header />
+          <Routes>
+              <Route exact path="/" element={<PicsView/>} >
+                picsview
+              </Route>
+              <Route path="/photo/:id" element={<Details/>}>
+                details
+              </Route>
+          </Routes>
+        <Footer />
+      </PhotosContextProvider>
+    </div>
   );
 }
 

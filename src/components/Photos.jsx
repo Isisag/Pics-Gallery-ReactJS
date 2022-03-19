@@ -2,12 +2,11 @@ import React from 'react';
 import "../App.css"
 import PhotoContext from '../contexts/PhotosContext';
 import Photo from "./Photo";
-import Grid from "@material-ui/core/Grid";
 
 
 const Photos = ({ photo }) => (
 
-    <Grid container justifyContent="center" className='photo-card-container'>
+    <div className='flex content-center align-middle flex-row'>
        
             {
             photo.map((photo) => {
@@ -24,7 +23,7 @@ const Photos = ({ photo }) => (
                 )
            })}
 
-    </ Grid>
+    </ div>
    
 )
 

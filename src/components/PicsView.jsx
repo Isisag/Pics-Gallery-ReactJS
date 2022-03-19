@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from 'react'
 import { PhotosContext } from '../contexts/PhotosContext';
 import Photos from './Photos';
-import Grid from "@material-ui/core/Grid"
+
 
 
 const PicsView = () => {
