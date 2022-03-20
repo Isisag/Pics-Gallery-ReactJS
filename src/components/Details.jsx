@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Details = ({ photo  }) => {
+const Details = ({ photographer, photographer_url, src, url, alt, photoId }) => {
+
+
   return (
     <div>
-        Details
-       
+       <p></p>
+       <p>{}</p>
+       <img src={src} alt={alt} />
         </div>
   )
 }
