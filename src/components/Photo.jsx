@@ -1,6 +1,6 @@
 import React from 'react'
 import "../App.css"
-import DetailsButton from './DetailsButton';
+// import DetailsButton from './DetailsButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage } from '@fortawesome/free-solid-svg-icons'
 
