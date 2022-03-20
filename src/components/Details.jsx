@@ -1,20 +1,12 @@
-import React, {useState, useContext} from 'react'
-import DetailsButton from './DetailsButton'
-// import { PhotosContext } from '../contexts/PhotosContext';
+import React from 'react'
 
-
-const Details = ({to, type}) => {
-
-    // const { photo } = useContext(PhotosContext);
-    
-
-    return (
-        <>
-            <p> im a details to {to}  </p>
-            <img  alt="" src="" />
-            <DetailsButton type="back" to="/" />
-        </>
-    )
+const Details = ({ photo  }) => {
+  return (
+    <div>
+        Details
+       
+        </div>
+  )
 }
 
 export default Details
