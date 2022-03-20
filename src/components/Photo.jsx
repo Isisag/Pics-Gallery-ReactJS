@@ -1,25 +1,27 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import "../App.css"
-import Paper from "@material-ui/core/Paper"
-import Details from "./Details"
 import DetailsButton from './DetailsButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faImage } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Photo = ({ photographer, photographer_url, src, url, alt, photoId }) => (
 
-    <Paper className="paper-adjust">
-        <div className="photo-card">
-            <h3> {alt} </h3>
-            <img src={src} alt={alt} className='img-card'/>
+    <div className="flex align-middle flex-row ">
+        <div className="m-5 bg-gray-100 w-30 p-4 text-center shadow-md rounded-2xl hover:scale-105 ease-out transition duration-200">
+            <img src={src} alt={alt} className='w-30'/>
             <br />
-            <h2> <b> Pic by:  </b> {photographer.toLowerCase()} </h2> 
-            <a href={photographer_url}> See more to {photographer} work </a> 
+            <div className='mb-1 text-gray-800'><b> Photographer </b><h2 className='uppercase'>{photographer}</h2></div>
+            <a href={photographer_url} className='h6 text-blue-500'> <i> See more to {photographer} work </i> </a> 
+            <br /><br /> 
+            <a href={url} className='uppercase font-semibold bg-blue-200 px-5 rounded-2xl' >
+            <FontAwesomeIcon icon={faImage} className='mx-1' />
+                hd photo </a>
             <br /><br />
-            <a href={url} > HD Pic View </a>
-            <br /><br />
-            <DetailsButton type="details" to={`photo/${photoId}`} />
+            {/* <DetailsButton type="details" to={`photo/${photoId}`} /> */}
         </div>
-    </Paper>
+    </div>
 
 );
 

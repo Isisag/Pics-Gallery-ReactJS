@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link} from "react-router-dom"
-import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom"
+
 
 const DetailsButton = ({ to, type }) => (
     <Link  to={to}>
-        <Button color="primary" variant='outlined'>
+       { <button className='uppercase bg-purple-300 px-5 rounded-2xl font-semibold'>
             { type === "details" ? "Details" : "Back"}
-        </Button>
+        </button>}
     </Link>
 )
 
