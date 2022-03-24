@@ -67,7 +67,7 @@ const PhotosContextProvider = ({children}) =>{
 
 
     return(
-       <PhotosContext.Provider value={{ color, photo }}>
+       <PhotosContext.Provider value={{ color, photo, query  }}>
            {children}
        </PhotosContext.Provider>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import "../App.css"
-import DetailsButton from './DetailsButton';
+// import DetailsButton from './DetailsButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage } from '@fortawesome/free-solid-svg-icons'
 
@@ -19,7 +19,7 @@ const Photo = ({ photographer, photographer_url, src, url, alt, photoId }) => (
             <FontAwesomeIcon icon={faImage} className='mx-1' />
                 hd photo </a>
             <br /><br />
-            <DetailsButton type="details" to={`photo/${photoId}`} />
+            {/* <DetailsButton type="details" to={`photo/${photoId}`} /> */}
         </div>
     </div>
 

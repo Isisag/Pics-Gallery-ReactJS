@@ -6,11 +6,11 @@ import Photos from './Photos';
 
 const PicsView = () => {
 
-    const { photo } = useContext(PhotosContext);
+    const { photo, query } = useContext(PhotosContext);
 
     return (
         <Fragment>
-            <Photos photo={photo} id={photo.photographer_id}/>
+            <Photos photo={photo} />
         </Fragment>
     )
 }
