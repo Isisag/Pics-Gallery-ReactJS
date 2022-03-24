@@ -8,8 +8,6 @@ const PhotosContextProvider = ({children}) =>{
     const [color, setColor] = useState()
     const [photoDetails, photoDetailsSet] = useState([])
     const [photo, setPhoto] = useState([])
-    // const [doneFetch, setDoneFetch] = useState("")
-
 
     useEffect( ()=> {
         getImage();
@@ -34,7 +32,7 @@ const PhotosContextProvider = ({children}) =>{
 
 
     return(
-       <PhotosContext.Provider value={{color, photo }}>
+       <PhotosContext.Provider value={{ color, photo }}>
            {children}
        </PhotosContext.Provider>
     )
