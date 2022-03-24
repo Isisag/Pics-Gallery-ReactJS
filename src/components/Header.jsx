@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from "../assets/photo-camera.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
 import ".././App.css"

@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PicsView from './components/PicsView';
-import DetailsIndex from './components/DetailsIndex';
+import Details from './components/Details';
 import PhotosContextProvider from './contexts/PhotosContext';
 
 
@@ -17,8 +17,9 @@ function App() {
               <Route exact path="/" element={<PicsView/>} >
                 picsview
               </Route>
-              <Route path="/photo/:id" element={<DetailsIndex/>}>
-                details
+              <Route path="/photo/:id" element={<Details/>}>
+                
+                henlo
               </Route>
           </Routes>
         <Footer />

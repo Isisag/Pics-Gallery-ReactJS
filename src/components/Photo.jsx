@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import "../App.css"
 import DetailsButton from './DetailsButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
