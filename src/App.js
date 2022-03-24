@@ -14,12 +14,11 @@ function App() {
       <PhotosContextProvider> 
           <Header />
           <Routes>
+              <Route path="/photo/:id" element={<Details/>}>
+                henlo
+              </Route>
               <Route exact path="/" element={<PicsView/>} >
                 picsview
-              </Route>
-              <Route path="/photo/:id" element={<Details/>}>
-                
-                henlo
               </Route>
           </Routes>
         <Footer />
