@@ -1,3 +1,0 @@
-curl -H "Authorization: 563492ad6f91700001000001abf7907093024695b4909bad840b1bef" \
-  "https://api.pexels.com/v1/search?query=nature&orientation=landscape&per_page=1&color=red"
-
